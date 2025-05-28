@@ -28,7 +28,13 @@ export const makeList = (taskName) => {
     task.value = null;
     // getTotalTask();
   } else {
-    alert("You must fill the task.");
+    Swal.fire({
+      position: "top-center",
+      icon: "info",
+      text: "you must fill task",
+      showConfirmButton: false,
+      timer: 4000,
+    });
   }
 };
 export const editList = (listId) => {
